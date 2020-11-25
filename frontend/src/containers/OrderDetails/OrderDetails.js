@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 
 // internal imports
 import OrderDetailsPage from '../../components/OrderDetails/OrderDetailsPage';
+import { saveOrder } from '../../redux/actions/orders/saveOrder/saveOrderAction';
 
 class OrderDetails extends Component {
 
@@ -15,7 +16,9 @@ class OrderDetails extends Component {
         <OrderDetailsPage
           history={this.props.history}
           isOrders={this.props.location.state && this.props.location.state.isOrders}
-          order = {this.props.order}
+          onSaveOrder={this.props.onSaveOrder}
+          order={this.props.order}
+          savedOrder={this.props.savedOrder}
         />
       </div>
     );
@@ -32,12 +35,15 @@ const mapStateToProps = (state, ownProps) => {
     && state.orders.orders.length > 0
     && getOrderById(state.orders.orders, id);
   return {
-    order
+    order,
+    savedOrder: state.savedOrder
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators({
+    onSaveOrder: saveOrder
+  }, dispatch);
 };
 
 OrderDetails.propTypes = {
@@ -49,11 +55,17 @@ OrderDetails.propTypes = {
       isOrders: PropTypes.bool.isRequired
     })
   }).isRequired,
+  onSaveOrder: PropTypes.func.isRequired,
   order: PropTypes.shape({
     address: PropTypes.string.isRequired,
     customer: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
+  }),
+  savedOrder: PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    loading: PropTypes.bool.isRequired,
+    order: PropTypes.shape({}).isRequired
   })
 };
 

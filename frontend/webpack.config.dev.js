@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.LOCAL_API_URL': JSON.stringify('./public/fakeData.json'),
+      'process.env.API_URL': JSON.stringify('http://localhost:3001'),
       'process.env.API_KEY': JSON.stringify('AIzaSyDf-i3-kecpDpJyG1uR-Jbf0fjXMPhO54U'),
       'process.env.AUTH_DOMAIN': JSON.stringify('construyo-coding-challenge.firebaseapp.com'),
       'process.env.DB_URL': JSON.stringify('https://construyo-coding-challenge.firebaseio.com'),

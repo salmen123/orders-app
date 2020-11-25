@@ -23,7 +23,6 @@ const readOrdersReducer = (state = initialState, action) => {
         error: '',
         loading: false,
         orders: action.orders
-
       };
     case READ_ORDERS_FAILURE:
       return {

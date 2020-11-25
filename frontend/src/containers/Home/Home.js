@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-
 // internal imports
 import HomePage from '../../components/Home/HomePage';
 import { logout } from '../../redux/actions/auth/authAction';
