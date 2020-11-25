@@ -21,7 +21,8 @@ const Table = (props) => {
         <tr className={'titles-Table'}>
           {
             orders[0] && Object.keys(orders[0]).map((title, index) => {
-              if (title !== 'id') return(<th key={index} className={'title-Table'}>{title}</th>);
+              if (title!=='id' && title!=='_id' && title!=='createdAt' && title!=='updatedAt' && title!=='__v')
+                return(<th key={index} className={'title-Table'}>{title}</th>);
             })
           }
           <th className={'empty-title-Table'} />
@@ -45,7 +46,7 @@ const Table = (props) => {
             >
               {
                 order !== undefined && Object.keys(order).map((field, index) => {
-                  if (field !== 'id')
+                  if (field!=='id' && field!=='_id' && field!=='createdAt' && field!=='updatedAt' && field!=='__v')
                     return (
                       <td
                         key={index}

@@ -7,13 +7,12 @@ import React, { Component } from 'react';
 // internal imports
 import { logout } from '../../redux/actions/auth/authAction';
 import OrdersPage from '../../components/Orders/OrdersPage';
-import { readOrders } from '../../redux/actions/orders/readOrders/readOrdersAction';
-
+import { readSavedOrders } from '../../redux/actions/orders/readSavedOrders/readSavedOrdersAction';
 
 class Orders extends Component {
 
   componentDidMount() {
-    this.props.onReadOrders();
+    this.props.onReadSavedOrders();
   }
 
   render() {
@@ -21,7 +20,7 @@ class Orders extends Component {
       <div className={'main'}>
         <OrdersPage
           onLogout={this.props.onLogout}
-          orders={this.props.orders}
+          orders={this.props.savedOrders}
         />
       </div>
     );
@@ -30,28 +29,24 @@ class Orders extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    orders: state.orders
+    savedOrders: state.savedOrders
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     onLogout: logout,
-    onReadOrders: readOrders
+    onReadSavedOrders: readSavedOrders
   }, dispatch);
 };
 
 Orders.propTypes = {
   onLogout: PropTypes.func.isRequired,
-  onReadOrders: PropTypes.func.isRequired,
-  orders: PropTypes.shape({
+  onReadSavedOrders: PropTypes.func.isRequired,
+  savedOrders: PropTypes.shape({
     error: PropTypes.string.isRequired,
     loading: PropTypes.bool.isRequired,
-    orders: PropTypes.arrayOf(PropTypes.shape({
-      address: PropTypes.string.isRequired,
-      customer: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    }))
+    orders: PropTypes.array.isRequired
   })
 };
 

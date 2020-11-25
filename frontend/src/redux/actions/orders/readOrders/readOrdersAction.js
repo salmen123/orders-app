@@ -11,8 +11,8 @@ export const readOrders = () => {
     axios
       .get(process.env.LOCAL_API_URL)
       .then(response => {
-        const news = response.data;
-        dispatch(readOrdersSuccess(news))
+        const orders = response.data;
+        dispatch(readOrdersSuccess(orders))
       })
       .catch(error => {
         dispatch(readOrdersFailure(error.message))
