@@ -16,9 +16,9 @@ class OrderDetailsPage extends Component {
       && toast.success(`${this.props.savedOrder.order.title} ordred.`);
 
     prevProps.savedOrder.loading
-    && !this.props.savedOrder.loading
-    && this.props.savedOrder.error !== ''
-    && toast.error('Delete failed. ' + this.props.savedOrder.error, { autoClose: false });
+      && !this.props.savedOrder.loading
+      && this.props.savedOrder.error !== ''
+      && toast.error('Delete failed. ' + this.props.savedOrder.error, { autoClose: false });
   }
 
   render() {
