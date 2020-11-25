@@ -1,0 +1,57 @@
+.content-Table {
+  border-collapse: collapse;
+  margin: 25px;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+};
+
+.titles-Table {
+  color: black;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  font-weight: bold;
+};
+
+.title-Table,
+.element-Table {
+  padding: 12px 15px;
+};
+
+// fill a width equal to scrollbar width
+.empty-title-Table {
+  background-color: #f3f3f3;
+  width: 15px;
+}
+
+.line-Table {
+  border-bottom: 1px solid #dddddd;
+};
+
+.line-Table:nth-of-type(even) {
+  background-color: #f3f3f3;
+};
+
+.line-Table:last-of-type {
+  border-bottom: 2px solid black;
+};
+
+.line-Table:hover {
+  background-color: azure;
+  cursor: pointer;
+};
+
+// set tbody height with overflow scroll
+.tbody-Table {
+  display:block;
+  height: 450px;
+  overflow-y:scroll;
+};
+
+.thead-Table, .line-Table {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+};

@@ -1,0 +1,31 @@
+.OrderDetailsPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+};
+
+.center-in-flex-parent-OrderDetailsPage {
+  align-self: center;
+  margin: auto;
+};
+
+.flex-column-OrderDetailsPage {
+  display: flex;
+  flex-direction: column;
+};
+
+.Table-OrderDetailsPage {
+  @extend .center-in-flex-parent-OrderDetailsPage;
+  width: fit-content;
+  @extend .flex-column-OrderDetailsPage;
+};
+
+.order-button-OrderDetailsPage {
+  width: fit-content;
+  margin: 10px 25px 0 auto;
+};
+
+.no-order-OrderDetailsPage {
+  @extend .center-in-flex-parent-OrderDetailsPage;
+  width: fit-content;
+};

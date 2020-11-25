@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "address": "Street 1 Berlin",
+    "customer": "Customer1",
+    "title": "Title1"
+  },
+  {
+    "id": "2",
+    "address": "Street 2 Munich",
+    "customer": "Customer2",
+    "title": "Title2"
+  },
+  {
+    "id": "3",
+    "address": "Street 3 Hamburg",
+    "customer": "Customer3",
+    "title": "Title3"
+  },
+  {
+    "id": "4",
+    "address": "Street 4 Mainz",
+    "customer": "Customer4",
+    "title": "Title4"
+  },
+  {
+    "id": "5",
+    "address": "Street 5 Stuttgart",
+    "customer": "Customer5",
+    "title": "Title5"
+  },
+  {
+    "id": "6",
+    "address": "Street 6 Dresden",
+    "customer": "Customer6",
+    "title": "Title6"
+  },
+  {
+    "id": "7",
+    "address": "Street 7 Dieburg",
+    "customer": "Customer7",
+    "title": "Title7"
+  },
+  {
+    "id": "8",
+    "address": "Street 8 Darmstadt",
+    "customer": "Customer8",
+    "title": "Title8"
+  },
+  {
+    "id": "9",
+    "address": "Street 9 Augsburg",
+    "customer": "Customer9",
+    "title": "Title9"
+  },
+  {
+    "id": "10",
+    "address": "Street 10 Frankfurt",
+    "customer": "Customer10",
+    "title": "Title10"
+  }
+]

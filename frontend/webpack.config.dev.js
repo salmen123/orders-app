@@ -24,7 +24,14 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.API_URL': JSON.stringify('./public/fakeData.json')
+      'process.env.LOCAL_API_URL': JSON.stringify('./public/fakeData.json'),
+      'process.env.API_KEY': JSON.stringify('AIzaSyDf-i3-kecpDpJyG1uR-Jbf0fjXMPhO54U'),
+      'process.env.AUTH_DOMAIN': JSON.stringify('construyo-coding-challenge.firebaseapp.com'),
+      'process.env.DB_URL': JSON.stringify('https://construyo-coding-challenge.firebaseio.com'),
+      'process.env.PROJECT_ID': JSON.stringify('construyo-coding-challenge'),
+      'process.env.STORAGE_BUCKET': JSON.stringify('construyo-coding-challenge.appspot.com'),
+      'process.env.MSG_SENDER_ID': JSON.stringify('275103082078'),
+      'process.env.APP_ID': JSON.stringify('1:275103082078:web:3d55c84dee230264')
     }),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
