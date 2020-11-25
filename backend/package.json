@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/salmen123/orders-app#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.15"
   },
