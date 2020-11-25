@@ -6,8 +6,7 @@
 2. **Install [MongoDB](https://www.mongodb.com/)**.
 3. **Navigate to this project's root directory on the command line.**
 4. **Install Node Packages.** - `npm install`
-5. **Install [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)** in Chrome.
-6. Having issues? See below.
+5. Having issues? See below.
 
 ## Having Issues? Try these things first:
 
