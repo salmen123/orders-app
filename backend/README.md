@@ -1,4 +1,4 @@
-# Starter Kit for [Coding Challenge](https://github.com/salmen123/orders-app/tree/master/frontend) on GitHub
+# Starter Kit for [Coding Challenge](https://github.com/salmen123/orders-app/tree/master/backend) on GitHub
 
 ## Get Started
 
